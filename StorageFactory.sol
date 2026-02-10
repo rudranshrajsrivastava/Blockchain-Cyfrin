@@ -1,5 +1,5 @@
 // SPDX-License-Identifier:MIT
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.26;
 
 // contract SimpleStorage{
 //     uint256 public myFavouriteNumber;//is is by default internal
@@ -41,8 +41,11 @@ import {SimpleStorage} from "./SimpleStorage.sol";
 contract StorageFactory{
 
     SimpleStorage public simpleStorage;
-
-    function StorageFactoryForSimpleStorage() public{
-        simpleStorage=new SimpleStorage();
+    SimpleStorage[] public listOfAllSimpleStorageContracts;
+    // function StorageFactoryForSimpleStorage() public{
+    //     simpleStorage=new SimpleStorage();
+    function createSimpleStorageContract() public{
+        SimpleStorage newSimpleStorageContract=new SimpleStorage();
+        listOfAllSimpleStorageContracts.push(newSimpleStorageContract); 
     }
-}
+    }
