@@ -54,8 +54,10 @@ contract StorageFactory{
         // Address
         // ABI -> Application Binary Interface
         // ABI tells the code how it can interact with the other contracts
-        SimpleStorage mySimpleStorage=listOfAllSimpleStorageContracts[_simpleStorageIndex];
-        mySimpleStorage.store(_newSimpleStorageNumber);
+        // SimpleStorage mySimpleStorage=listOfAllSimpleStorageContracts[_simpleStorageIndex];
+        // mySimpleStorage.store(_newSimpleStorageNumber);
+        // or
+         listOfAllSimpleStorageContracts[_simpleStorageIndex].store(_newSimpleStorageNumber);
     }
 
     function sfGet(uint256 _simpleStorageIndex) public view returns(uint256){
