@@ -46,7 +46,7 @@ contract StorageFactory{
     //     simpleStorage=new SimpleStorage();
     function createSimpleStorageContract() public{
         SimpleStorage newSimpleStorageContract=new SimpleStorage();
-        listOfAllSimpleStorageContracts.push(newSimpleStorageContract); 
+        listOfAllSimpleStorageContracts.push(newSimpleStorageContract);
     }
 
     function sfStore(uint256 _simpleStorageIndex,uint256 _newSimpleStorageNumber) public{
